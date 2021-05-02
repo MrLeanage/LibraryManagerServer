@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1024.0" style="-fx-background-color: #006a9f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.home.HomeController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="95.0" prefWidth="1024.0" style="-fx-background-color: #006a9f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="41.0" layoutY="45.0" prefHeight="49.0" prefWidth="422.0" text="L I B R A R Y   M A N A G E R" textFill="WHITE" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="40.0">
+               <font>
+                  <Font name="Arial Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="userLabel" alignment="CENTER_RIGHT" layoutX="441.0" layoutY="62.0" prefHeight="31.0" prefWidth="433.0" text="USER" textFill="WHITE" AnchorPane.bottomAnchor="47.0" AnchorPane.rightAnchor="135.0">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" size="30" />
+               </graphic>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Label>
+            <MenuButton layoutX="894.0" layoutY="62.0" mnemonicParsing="false" style="-fx-background-color: #00a8ff;" text="ACCOUNT" textFill="WHITE" AnchorPane.bottomAnchor="52.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="17.0">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#logout" text="LOGOUT" />
+              </items>
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </MenuButton>
+            <Label fx:id="dateLabel" alignment="CENTER_RIGHT" layoutX="603.0" layoutY="57.0" prefHeight="25.0" prefWidth="401.0" text="DATE" textFill="WHITE" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="603.0">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="detailPane" layoutY="142.0" prefHeight="628.0" prefWidth="728.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="296.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="95.0" />
+      <AnchorPane prefHeight="628.0" prefWidth="296.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="728.0" AnchorPane.topAnchor="95.0">
+         <children>
+            <VBox layoutY="68.0" prefHeight="544.0" prefWidth="275.0" style="-fx-background-color: #ffffff;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+               <children>
+                  <Button fx:id="homeMenuButton" mnemonicParsing="false" onAction="#loadHome" onMousePressed="#setSelection" prefHeight="80.0" prefWidth="265.0" style="-fx-background-color: #006a9f;" text="HOME" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bookMenuButton" mnemonicParsing="false" onAction="#loadBook" onMousePressed="#setSelection" prefHeight="80.0" prefWidth="265.0" style="-fx-background-color: #006a9f;" text="BOOKS" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="requestMenuButton" mnemonicParsing="false" onAction="#loadRequest" onMousePressed="#setSelection" prefHeight="80.0" prefWidth="265.0" style="-fx-background-color: #006a9f;" text="REQUESTS" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="feedbackMenuButton" mnemonicParsing="false" onAction="#loadFeedback" onMousePressed="#setSelection" prefHeight="80.0" prefWidth="265.0" style="-fx-background-color: #006a9f;" text="FEEDBACKS" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="userMenuButton" mnemonicParsing="false" onAction="#loadUser" onMousePressed="#setSelection" prefHeight="80.0" prefWidth="265.0" style="-fx-background-color: #006a9f;" text="USERS" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="aboutLibraryButton" mnemonicParsing="false" onAction="#loadAbout" onMousePressed="#setSelection" prefHeight="80.0" prefWidth="265.0" style="-fx-background-color: #006a9f;" text="About Library" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="10.0" layoutY="3.0" stroke="#d9dbdb00" strokeType="INSIDE" strokeWidth="5.0" width="275.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="3.0" />
+            <Label layoutX="16.0" layoutY="20.0" text="SERVER STATUS    :" textFill="#006a9f" AnchorPane.leftAnchor="16.0">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="serverStatusLabel" alignment="CENTER_RIGHT" layoutX="175.0" layoutY="19.0" prefHeight="21.0" prefWidth="96.0" text="STATUS" textFill="#006a9f">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

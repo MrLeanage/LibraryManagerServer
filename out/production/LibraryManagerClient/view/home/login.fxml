@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #d9dbdc;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.home.LoginController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="1024.0" style="-fx-background-color: #00a8ff;" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="163.0" layoutY="87.0" prefHeight="49.0" prefWidth="686.0" text="L I B R A R Y   M A N A G E R" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="43.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutX="169.0" layoutY="169.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="686.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="169.0" AnchorPane.rightAnchor="169.0">
+         <children>
+            <Circle fill="#00a8ff" layoutX="348.0" layoutY="141.0" radius="100.0" stroke="TRANSPARENT" strokeType="INSIDE" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="238.0" />
+            <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="289.0" layoutY="193.0" size="150" />
+            <TextField layoutX="91.0" layoutY="272.0" prefHeight="41.0" prefWidth="514.0" promptText="Enter User Name" />
+            <PasswordField layoutX="91.0" layoutY="334.0" prefHeight="41.0" prefWidth="514.0" promptText="Enter Password" />
+            <Button layoutX="175.0" layoutY="423.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadHome" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #00a8ff;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="370.0" layoutY="423.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #04df1d;" text="Clear " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="91.0" layoutY="377.0" prefHeight="41.0" prefWidth="514.0" text="Validation text Here" textFill="RED" />
+            <Label alignment="CENTER" layoutX="321.0" layoutY="472.0" prefHeight="21.0" prefWidth="65.0" text="OR" />
+            <Label layoutX="169.0" layoutY="501.0" prefHeight="21.0" prefWidth="221.0" text="Click here to use Guest Account" />
+            <Label layoutX="390.0" layoutY="501.0" prefHeight="21.0" prefWidth="149.0" text="Guest Account" textFill="#00a8ff" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

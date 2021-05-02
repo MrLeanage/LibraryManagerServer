@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="510.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.feedbackManagement.FeedbackCardController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="500.0" layoutX="10.0" layoutY="10.0" stroke="#006a9f" strokeType="INSIDE" strokeWidth="5.0" width="690.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label alignment="CENTER" layoutX="11.0" layoutY="35.0" prefHeight="31.0" prefWidth="678.0" text="Feedback Card" textFill="#006a9f">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="116.0" prefHeight="21.0" prefWidth="200.0" text="Category :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="155.0" prefHeight="21.0" prefWidth="200.0" text="Title :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="191.0" prefHeight="21.0" prefWidth="200.0" text="Comment :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="319.0" prefHeight="21.0" prefWidth="200.0" text="Date :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="357.0" prefHeight="21.0" prefWidth="200.0" text="Time :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="392.0" prefHeight="21.0" prefWidth="200.0" text="Status :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="categoryTextField" editable="false" layoutX="289.0" layoutY="113.0" prefHeight="31.0" prefWidth="367.0" />
+      <TextField fx:id="titleTetField" editable="false" layoutX="289.0" layoutY="150.0" prefHeight="31.0" prefWidth="367.0" />
+      <TextArea fx:id="commentTextArea" editable="false" layoutX="289.0" layoutY="187.0" prefHeight="122.0" prefWidth="367.0" />
+      <TextField fx:id="dateTetField" editable="false" layoutX="289.0" layoutY="314.0" prefHeight="31.0" prefWidth="367.0" />
+      <TextField fx:id="timeTetField" editable="false" layoutX="289.0" layoutY="351.0" prefHeight="31.0" prefWidth="367.0" />
+      <TextField fx:id="statusTetField" editable="false" layoutX="289.0" layoutY="388.0" prefHeight="31.0" prefWidth="367.0" />
+      <JFXButton fx:id="closeCardButton" cancelButton="true" layoutX="551.0" layoutY="452.0" onAction="#closeCard" style="-fx-background-color: #ff0000;" text="Close Card" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="reviewedButton" defaultButton="true" layoutX="377.0" layoutY="452.0" onAction="#changeStatus" prefWidth="160.0" style="-fx-background-color: #006a9f;" text="Mark as Reviewed" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CHECK" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="pendingButton" layoutX="377.0" layoutY="452.0" onAction="#changeStatus" prefWidth="160.0" style="-fx-background-color: #009307;" text="Mark as Pending" textFill="WHITE" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="QUESTION" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

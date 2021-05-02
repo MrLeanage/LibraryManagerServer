@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="510.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.requestManagement.RequestCardController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="500.0" layoutX="10.0" layoutY="10.0" stroke="#006a9f" strokeType="INSIDE" strokeWidth="5.0" width="690.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label alignment="CENTER" layoutX="11.0" layoutY="35.0" prefHeight="31.0" prefWidth="678.0" text="Request Card" textFill="#006a9f">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="82.0" prefHeight="21.0" prefWidth="200.0" text="Name of the Book :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="251.0" prefHeight="28.0" prefWidth="224.0" text="Book Author :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="121.0" prefHeight="28.0" prefWidth="224.0" text="Description about Book :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="288.0" prefHeight="21.0" prefWidth="200.0" text="Book Edition :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="326.0" prefHeight="21.0" prefWidth="200.0" text="Publisher :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="401.0" prefHeight="21.0" prefWidth="200.0" text="Request Status :" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bookNameTextField" editable="false" layoutX="289.0" layoutY="79.0" prefHeight="31.0" prefWidth="367.0" />
+      <TextField fx:id="authorTextField" editable="false" layoutX="289.0" layoutY="246.0" prefHeight="31.0" prefWidth="367.0" />
+      <TextArea fx:id="descriptionTextArea" editable="false" layoutX="289.0" layoutY="117.0" prefHeight="122.0" prefWidth="367.0" />
+      <TextField fx:id="editionTextField" editable="false" layoutX="289.0" layoutY="283.0" prefHeight="31.0" prefWidth="367.0" />
+      <TextField fx:id="publisherTextField" editable="false" layoutX="289.0" layoutY="320.0" prefHeight="31.0" prefWidth="367.0" />
+      <TextField fx:id="statusTextField" editable="false" layoutX="289.0" layoutY="397.0" prefHeight="31.0" prefWidth="367.0" />
+      <JFXButton fx:id="closeCardButton" cancelButton="true" layoutX="551.0" layoutY="452.0" onAction="#closeCard" style="-fx-background-color: #ff0000;" text="Close Card" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="reviewedButton" defaultButton="true" layoutX="375.0" layoutY="452.0" onAction="#changeStatus" prefWidth="160.0" style="-fx-background-color: #006a9f;" text="Mark as Reviewed" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CHECK" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="pendingButton" layoutX="375.0" layoutY="452.0" onAction="#changeStatus" prefWidth="160.0" style="-fx-background-color: #009307;" text="Mark as Pending" textFill="WHITE" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="QUESTION" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="workRequestButton" defaultButton="true" layoutX="203.0" layoutY="452.0" onAction="#workOnRequest" prefWidth="160.0" style="-fx-background-color: #f6ff00;" text="Work on Request">
+         <graphic>
+            <FontAwesomeIconView glyphName="CHECK" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="50.0" layoutY="364.0" prefHeight="21.0" prefWidth="200.0" text="Requested Date :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dateTextField" editable="false" layoutX="289.0" layoutY="358.0" prefHeight="31.0" prefWidth="367.0" />
+   </children>
+</AnchorPane>
